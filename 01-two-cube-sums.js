@@ -1,15 +1,11 @@
 function hasTwoCubeSums(n) {
-	let ways = 0;
-  for(let a = 1; aaa  n;a++){
-     for(let b = a + 1; aaa + bbb = n;b++){
-    if(aaa+bbb === n){
-      ways++;
+  let w = 0;
+  for (let a = 1; a * a * a < n; a++) {
+    for (let b = a + 1; a * a * a + b * b * b <= n; b++) {
+      if (a * a * a + b * b * b === n) {
+        w++;
+      }
     }
-    
   }
-    
-  }
-  
-  
-  return ways =2;
+  return w >= 2;
 }
